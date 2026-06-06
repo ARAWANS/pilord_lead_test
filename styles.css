@@ -695,19 +695,22 @@ button:disabled {
 .studio-copy h1 {
   max-width: 12ch;
   color: #22331f;
+  font-size: clamp(2.35rem, 4.6vw, 4rem);
+  line-height: 1.02;
 }
 
 .studio-lead {
   margin: 14px 0 0;
-  color: #48603e;
-  font-size: 1.05rem;
-  font-weight: 700;
+  color: #5a6d50;
+  font-size: 0.98rem;
+  font-weight: 600;
 }
 
 .studio-text {
   max-width: 56ch;
   margin: 12px 0 0;
-  color: #576753;
+  color: #667461;
+  font-size: 0.98rem;
 }
 
 .studio-links {
@@ -733,6 +736,7 @@ button:disabled {
 
 .studio-visual-image {
   aspect-ratio: 1.25 / 1;
+  object-position: center top;
 }
 
 .studio-visual-note {
