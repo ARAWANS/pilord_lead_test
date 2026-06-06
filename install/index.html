@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PiLord | Get Install Link</title>
-    <meta name="description" content="Enter your email and get the PiLord closed test install link instantly." />
+    <title>PiLord | Install App</title>
+    <meta name="description" content="Enter your email to receive the PiLord test install link instantly." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,30 +13,19 @@
     />
     <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body class="install-page">
+  <body class="install-page minimal-install-page">
     <main class="install-shell">
-      <section class="install-card">
-        <div class="install-topbar">
-          <nav class="lang-switch" aria-label="Language switcher">
-            <a class="active" href="./">English</a>
-            <a href="../th/install/">ไทย</a>
-          </nav>
-          <a class="text-link" href="../">Back to promo page</a>
-        </div>
-
-        <div class="install-brand">
+      <section class="install-card minimal-install-card">
+        <div class="install-brand minimal-install-brand">
           <img class="brand-logo" src="../assets/images/monster_face.png" alt="PiLord icon" />
-          <div>
-            <p class="section-kicker">Closed Test Access</p>
-            <h1>Get the install link</h1>
-          </div>
+          <h1>Install App</h1>
         </div>
 
-        <p class="install-copy">Enter your email once. You will get the Play Store install link immediately on this page.</p>
+        <p class="install-copy minimal-install-copy">Enter your email to receive the test app install link.</p>
 
         <form
           id="lead-form"
-          class="simple-form"
+          class="simple-form minimal-form"
           novalidate
           data-lead-source="landing_page_install_en"
           data-lead-note="Instant install link request from simple install page"
@@ -59,13 +48,13 @@
             placeholder="you@example.com"
             required
           />
-          <button id="submit-button" type="submit">Get Link</button>
+          <p class="consent-note">* By continuing, you agree to receive the test app.</p>
+          <button id="submit-button" type="submit">Get Install Link</button>
           <p id="form-status" class="form-status" role="status"></p>
         </form>
 
         <div id="install-result" class="install-result" hidden>
-          <a id="install-link" class="primary-button install-link-button" href="#" target="_blank" rel="noreferrer">Open Play Store Install Link</a>
-          <p class="install-note">Use the same Google account that has closed-test access.</p>
+          <a id="install-link" class="primary-button install-link-button" href="#" target="_blank" rel="noreferrer">Open Install Link</a>
         </div>
       </section>
     </main>

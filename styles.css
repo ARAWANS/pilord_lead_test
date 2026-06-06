@@ -407,6 +407,10 @@ button:hover {
   padding: 20px;
 }
 
+.minimal-install-page {
+  background: linear-gradient(180deg, #08111d 0%, #05080f 100%);
+}
+
 .install-shell {
   width: 100%;
 }
@@ -418,11 +422,11 @@ button:hover {
   background: var(--panel-strong);
 }
 
-.install-topbar {
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 24px;
+.minimal-install-card {
+  max-width: 420px;
+  padding: 28px 22px 22px;
+  border-radius: 24px;
+  background: rgba(10, 16, 28, 0.96);
 }
 
 .install-brand {
@@ -431,15 +435,41 @@ button:hover {
   margin-bottom: 12px;
 }
 
+.minimal-install-brand {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.minimal-install-brand .brand-logo {
+  width: 68px;
+  height: 68px;
+}
+
 .install-card h1 {
   font-size: clamp(2.4rem, 7vw, 3.6rem);
   max-width: none;
+}
+
+.minimal-install-card h1 {
+  font-size: clamp(2rem, 7vw, 2.8rem);
+}
+
+.minimal-install-copy {
+  margin: 0 0 18px;
+  text-align: center;
 }
 
 .simple-form {
   display: grid;
   gap: 12px;
   margin-top: 18px;
+}
+
+.minimal-form {
+  margin-top: 0;
 }
 
 .field-label {
@@ -476,6 +506,12 @@ button:disabled {
   cursor: progress;
 }
 
+.consent-note {
+  margin: -2px 0 2px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
 .form-status {
   min-height: 1.4em;
   margin: 0;
@@ -494,8 +530,6 @@ button:disabled {
   display: grid;
   gap: 10px;
   margin-top: 18px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .install-link-button {
