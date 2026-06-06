@@ -1,16 +1,53 @@
 (function () {
   const config = window.PILORD_CONFIG || {};
   const form = document.getElementById('lead-form');
-  if (!form) {
-    return;
-  }
-
   const emailInput = document.getElementById('email');
   const submitButton = document.getElementById('submit-button');
   const status = document.getElementById('form-status');
-  const installResult = document.getElementById('install-result');
-  const installLink = document.getElementById('install-link');
-  const formData = form.dataset || {};
+  const quoteText = document.getElementById('quote-text');
+  const formData = form ? form.dataset : {};
+
+  const lineLink = document.getElementById('line-link');
+  const telegramLink = document.getElementById('telegram-link');
+  const telegramCardLink = document.getElementById('telegram-card-link');
+
+  let quotes = [
+    '“It feels like a spellbook disguised as a math game.”',
+    '“The battles make practice feel surprisingly exciting.”',
+    '“I wanted one more stage every time I cleared a level.”',
+    '“The atmosphere makes learning feel adventurous, not repetitive.”',
+  ];
+
+  if (formData.quotes) {
+    try {
+      const parsedQuotes = JSON.parse(formData.quotes);
+      if (Array.isArray(parsedQuotes) && parsedQuotes.length > 0) {
+        quotes = parsedQuotes;
+      }
+    } catch (error) {
+      void error;
+    }
+  }
+
+  let quoteIndex = 0;
+  window.setInterval(function rotateQuote() {
+    quoteIndex = (quoteIndex + 1) % quotes.length;
+    quoteText.style.opacity = '0';
+    window.setTimeout(function swapText() {
+      quoteText.textContent = quotes[quoteIndex];
+      quoteText.style.opacity = '1';
+    }, 180);
+  }, 3600);
+
+  if (config.lineUrl && lineLink) {
+    lineLink.href = config.lineUrl;
+  }
+  if (config.telegramUrl && telegramLink) {
+    telegramLink.href = config.telegramUrl;
+  }
+  if (config.telegramUrl && telegramCardLink) {
+    telegramCardLink.href = config.telegramUrl;
+  }
 
   function setStatus(message, type) {
     status.textContent = message;
@@ -22,24 +59,6 @@
 
   function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
-  function getInstallUrl() {
-    return (config.installLinkUrl || '').trim();
-  }
-
-  function revealInstallLink() {
-    if (!installResult || !installLink) {
-      return;
-    }
-
-    const url = getInstallUrl();
-    if (!url) {
-      throw new Error(formData.missingInstallLink || 'Install link is not configured yet. Add it in config.js.');
-    }
-
-    installLink.href = url;
-    installResult.hidden = false;
   }
 
   async function submitLead(email) {
@@ -62,7 +81,7 @@
       body: JSON.stringify({
         email: email,
         source: formData.leadSource || 'landing_page',
-        note: formData.leadNote || 'Instant install link request',
+        note: formData.leadNote || 'Request Play Store install link for closed test',
         request_locale: navigator.language || '',
         user_agent: navigator.userAgent || '',
         referrer: document.referrer || '',
@@ -77,7 +96,7 @@
       return 'duplicate';
     }
 
-    let message = formData.errorFallback || 'Something went wrong. Please try again later.';
+    let message = 'Could not submit your request right now.';
     try {
       const payload = await response.json();
       if (payload && payload.message) {
@@ -100,18 +119,15 @@
     }
 
     submitButton.disabled = true;
-    setStatus(formData.sending || 'Preparing your install link...', null);
+    setStatus(formData.sending || 'Sending your request...', null);
 
     try {
       const result = await submitLead(email);
-      if (formData.revealInstall === 'true') {
-        revealInstallLink();
-      }
-
       if (result === 'duplicate') {
-        setStatus(formData.duplicate || 'You were already registered. Your install link is ready below.', 'success');
+        setStatus(formData.duplicate || 'You are already on the list. Please wait for the install link by email.', 'success');
       } else {
-        setStatus(formData.success || 'Your install link is ready.', 'success');
+        form.reset();
+        setStatus(formData.success || 'Please wait for the install link by email.', 'success');
       }
     } catch (error) {
       setStatus(error.message || formData.errorFallback || 'Something went wrong. Please try again later.', 'error');

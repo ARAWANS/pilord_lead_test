@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PiLord | สมัครเล่นก่อนใคร</title>
+    <meta
+      name="description"
+      content="ลงทะเบียนเพื่อเล่น PiLord ก่อนใคร เกมคณิตศาสตร์แฟนตาซี ครอบคลุมเนื้อหาตั้งแต่ประถมถึงมัธยมปลาย เวอร์ชันเต็มไม่มีรายเดือน ใช้งานได้ไม่จำกัด"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Cormorant+Garamond:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="sky"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+
+    <main class="page-shell">
+      <section class="hero-card">
+        <div class="hero-top">
+          <div class="brand-lockup">
+            <img class="brand-logo" src="../assets/images/monster_face.png" alt="PiLord app icon" />
+            <div class="brand-copy">
+              <p class="eyebrow">Math-fueled fantasy adventure</p>
+              <h1>PiLord</h1>
+            </div>
+          </div>
+          <div class="play-badge">
+            <img src="../assets/icons/playstore-badge.svg" alt="Google Play" />
+            <span>Play Store test</span>
+          </div>
+        </div>
+
+        <div class="hero-main">
+          <div class="copy-block">
+            <div class="lang-switch" aria-label="Language switcher">
+              <a href="../">English</a>
+              <a class="active" href="./">ไทย</a>
+            </div>
+            <p class="eyebrow">Closed Test Invitation</p>
+            <h2>ลงทะเบียน ใช้เล่นก่อนใคร</h2>
+            <p class="lead">
+              เกมคณิตศาสตร์ผจญภัยแฟนตาซี ที่ทำให้คณิตศาสตร์เป็นดั่งเวทมนต์
+            </p>
+            <p class="lead">
+              รองรับเนื้อหาตั้งแต่ ประถม - มัธยมปลาย
+            </p>
+            <p class="lead">
+              บวกลบคูณ หาร เศษส่วน ทศนิยม แก้สมการ ฟังก์ชัน ตรีโกณมิติ
+            </p>
+            <p class="lead emphasis">
+              เวอร์ชันเต็ม ไม่มีรายเดือน ใช้งานได้ไม่จำกัด
+            </p>
+          </div>
+
+          <div class="visual-strip">
+            <img class="highlight-image" src="../assets/images/highlight.png" alt="PiLord gameplay highlight" />
+          </div>
+        </div>
+
+        <div class="signal-row">
+          <div class="rating-pill">
+            <div class="stars" aria-label="4.5 out of 5 stars from internal testing">
+              <span class="stars-base">★★★★★</span>
+              <span class="stars-fill">★★★★★</span>
+            </div>
+            <span><strong>4.5/5</strong> internal test</span>
+          </div>
+          <div class="quote-pill" aria-live="polite">
+            <span class="quote-label">เสียงจากผู้เล่น</span>
+            <strong id="quote-text">“เหมือนหนังสือเวทมนตร์ที่ซ่อนอยู่ในเกมคณิตศาสตร์”</strong>
+          </div>
+        </div>
+
+        <form
+          id="lead-form"
+          class="signup-panel"
+          novalidate
+          data-lead-source="landing_page_th"
+          data-lead-note="Thai landing page request for Play Store install link"
+          data-config-error="หน้ายังไม่ได้ตั้งค่า Supabase กรุณาเพิ่ม URL และ anon key ใน config.js"
+          data-invalid-email="กรุณากรอกอีเมลให้ถูกต้อง"
+          data-sending="กำลังส่งคำขอ..."
+          data-duplicate="คุณอยู่ในรายชื่อแล้ว กรุณารอลิงก์ติดตั้งทางอีเมล"
+          data-success="กรุณารอลิงก์ติดตั้งทางอีเมล"
+          data-error-fallback="เกิดข้อผิดพลาด กรุณาลองใหม่ภายหลัง"
+          data-quotes='["“เหมือนหนังสือเวทมนตร์ที่ซ่อนอยู่ในเกมคณิตศาสตร์”","“ฉากต่อสู้ทำให้การฝึกคณิตศาสตร์สนุกกว่าที่คิด”","“ผ่านหนึ่งด่านแล้วอยากเล่นต่ออีกด่านทันที”","“บรรยากาศทำให้การเรียนรู้รู้สึกเหมือนการผจญภัย”"]'
+        >
+          <label for="email" class="field-label">รับลิงก์ติดตั้งจาก Play Store</label>
+          <div class="signup-row">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+            <button id="submit-button" type="submit">ลงทะเบียน</button>
+          </div>
+          <p id="form-status" class="form-status" role="status"></p>
+        </form>
+
+        <div class="contact-row">
+          <a class="contact-pill line" id="line-link" href="https://line.me/" target="_blank" rel="noreferrer">
+            <span class="contact-title">Line</span>
+            <span class="contact-subtitle">คุยกับเรา</span>
+          </a>
+          <a class="contact-pill telegram" id="telegram-link" href="https://t.me/" target="_blank" rel="noreferrer">
+            <span class="contact-title">Telegram</span>
+            <span class="contact-subtitle">ติดตามข่าวสาร</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="../config.js"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>

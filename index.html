@@ -3,125 +3,152 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PiLord | Closed Test Access</title>
+    <title>PiLord | Official Closed Test</title>
     <meta
       name="description"
-      content="Register to play PiLord before anyone else. A math fantasy adventure covering primary to high school math with full access and no monthly subscription."
+      content="PiLord is a fantasy math adventure game for mobile. Join the closed test and get early access to a premium learning experience built like an official game launch page."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Cormorant+Garamond:wght@500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <div class="sky"></div>
-    <div class="orb orb-a"></div>
-    <div class="orb orb-b"></div>
+  <body class="promo-page">
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
 
-    <main class="page-shell">
-      <section class="hero-card">
-        <div class="hero-top">
-          <div class="brand-lockup">
-            <img class="brand-logo" src="./assets/images/monster_face.png" alt="PiLord app icon" />
-            <div class="brand-copy">
-              <p class="eyebrow">Math-fueled fantasy adventure</p>
-              <h1>PiLord</h1>
-            </div>
+    <header class="site-header">
+      <a class="brand" href="./">
+        <img class="brand-logo" src="./assets/images/monster_face.png" alt="PiLord icon" />
+        <div>
+          <span class="brand-kicker">PiLord</span>
+          <strong>Math fantasy adventure</strong>
+        </div>
+      </a>
+      <div class="header-actions">
+        <nav class="lang-switch" aria-label="Language switcher">
+          <a class="active" href="./">English</a>
+          <a href="./th/">ไทย</a>
+        </nav>
+        <a class="ghost-button" href="./legacy/">Legacy Page</a>
+        <a class="primary-button" href="./install/">Get Install Link</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-copy">
+          <p class="section-kicker">Official Closed Test</p>
+          <h1>Adventure first. Math follows naturally.</h1>
+          <p class="hero-lead">
+            PiLord turns arithmetic, algebra, and advanced school math into spellcasting, stage battles, and progression that feels like a real mobile game.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="./install/">Request Install Link</a>
+            <a class="secondary-button" href="#overview">See Overview</a>
           </div>
-          <div class="play-badge">
-            <img src="./assets/icons/playstore-badge.svg" alt="Google Play" />
-            <span>Play Store test</span>
+          <ul class="hero-points">
+            <li>Built for phones and tablets in portrait mode</li>
+            <li>From primary-school basics to high-school topics</li>
+            <li>Premium access model with no monthly subscription</li>
+          </ul>
+        </div>
+        <div class="hero-visual-panel">
+          <div class="badge-row">
+            <span class="pill">Android closed test</span>
+            <span class="pill">Play Store delivery</span>
+          </div>
+          <img class="hero-art" src="./assets/images/highlight.png" alt="PiLord gameplay preview" />
+          <div class="stat-grid">
+            <article>
+              <strong>Primary to high school</strong>
+              <span>Curriculum coverage designed into gameplay</span>
+            </article>
+            <article>
+              <strong>Fantasy battle loop</strong>
+              <span>Magic, enemies, stages, and unlock progression</span>
+            </article>
+            <article>
+              <strong>Closed test onboarding</strong>
+              <span>Simple access flow for invited testers</span>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="hero-main">
-          <div class="copy-block">
-            <div class="lang-switch" aria-label="Language switcher">
-              <a class="active" href="./">English</a>
-              <a href="./th/">ไทย</a>
-            </div>
-            <p class="eyebrow">Closed Test Invitation</p>
-            <h2>Register to play before anyone else</h2>
-            <p class="lead">
-              A math fantasy adventure game where mathematics feels like magic.
-            </p>
-            <p class="lead">
-              Covers content from primary school to high school.
-            </p>
-            <p class="lead">
-              Addition, subtraction, multiplication, division, fractions, decimals, equations, functions, and trigonometry.
-            </p>
-            <p class="lead emphasis">
-              Full version. No monthly subscription. Unlimited access.
-            </p>
-          </div>
-
-          <div class="visual-strip">
-            <img class="highlight-image" src="./assets/images/highlight.png" alt="PiLord gameplay highlight" />
-          </div>
+      <section id="overview" class="content-section split-section">
+        <div>
+          <p class="section-kicker">Product Story</p>
+          <h2>Made to look and feel like a game, not a worksheet.</h2>
         </div>
-
-        <div class="signal-row">
-          <div class="rating-pill">
-            <div class="stars" aria-label="4.5 out of 5 stars from internal testing">
-              <span class="stars-base">★★★★★</span>
-              <span class="stars-fill">★★★★★</span>
-            </div>
-            <span><strong>4.5/5</strong> internal test</span>
-          </div>
-          <div class="quote-pill" aria-live="polite">
-            <span class="quote-label">Players say</span>
-            <strong id="quote-text">“It feels like a spellbook disguised as a math game.”</strong>
-          </div>
+        <div class="section-copy-grid">
+          <p>
+            Players take the role of a wizard fighting Pi creatures in a world where mathematics powers every spell. The learning path is embedded inside combat, not placed beside it.
+          </p>
+          <p>
+            Early stages focus on confidence and rhythm. Later content escalates through fractions, decimals, equations, functions, and trigonometry as players unlock stronger magic.
+          </p>
         </div>
+      </section>
 
-        <form
-          id="lead-form"
-          class="signup-panel"
-          novalidate
-          data-lead-source="landing_page_en"
-          data-lead-note="Request Play Store install link for closed test"
-          data-config-error="Landing page is not configured yet. Add Supabase URL and anon key in config.js."
-          data-invalid-email="Please enter a valid email address."
-          data-sending="Sending your request..."
-          data-duplicate="You are already on the list. Please wait for the install link by email."
-          data-success="Please wait for the install link by email."
-          data-error-fallback="Something went wrong. Please try again later."
-          data-quotes='["“It feels like a spellbook disguised as a math game.”","“The battles make practice feel surprisingly exciting.”","“I wanted one more stage every time I cleared a level.”","“The atmosphere makes learning feel adventurous, not repetitive.”"]'
-        >
-          <label for="email" class="field-label">Request the Play Store install link</label>
-          <div class="signup-row">
-            <input
-              id="email"
-              name="email"
-              type="email"
-              inputmode="email"
-              autocomplete="email"
-              placeholder="you@example.com"
-              required
-            />
-            <button id="submit-button" type="submit">Join Now</button>
-          </div>
-          <p id="form-status" class="form-status" role="status"></p>
-        </form>
+      <section class="content-section feature-grid-section">
+        <article class="feature-card">
+          <p class="section-kicker">Gameplay</p>
+          <h3>Battle through stages</h3>
+          <p>Answer correctly to cast spells, remove enemies, and survive stronger waves.</p>
+        </article>
+        <article class="feature-card">
+          <p class="section-kicker">Learning</p>
+          <h3>Topic coverage that scales</h3>
+          <p>Starts simple and grows into richer mathematical thinking without breaking the game flow.</p>
+        </article>
+        <article class="feature-card">
+          <p class="section-kicker">Progression</p>
+          <h3>Unlock higher-level magic</h3>
+          <p>Players are pushed toward better mastery because stronger stages require harder spells.</p>
+        </article>
+        <article class="feature-card accent-card">
+          <p class="section-kicker">Closed Test</p>
+          <h3>Ready for early testers now</h3>
+          <p>Use the install-link page to collect email, confirm access interest, and open the Play Store install flow immediately.</p>
+          <a class="text-link" href="./install/">Open install-link page</a>
+        </article>
+      </section>
 
-        <div class="contact-row">
-          <a class="contact-pill line" id="line-link" href="https://line.me/" target="_blank" rel="noreferrer">
-            <span class="contact-title">Line</span>
-            <span class="contact-subtitle">Chat with us</span>
-          </a>
-          <a class="contact-pill telegram" id="telegram-link" href="https://t.me/" target="_blank" rel="noreferrer">
-            <span class="contact-title">Telegram</span>
-            <span class="contact-subtitle">Get updates</span>
-          </a>
+      <section class="content-section timeline-section">
+        <div>
+          <p class="section-kicker">Why This Page</p>
+          <h2>A proper promo page first, a minimal install page second.</h2>
         </div>
+        <div class="timeline-list">
+          <article>
+            <strong>Step 1</strong>
+            <p>Learn what PiLord is, what it teaches, and why the product exists.</p>
+          </article>
+          <article>
+            <strong>Step 2</strong>
+            <p>Move to a focused install page with no distractions.</p>
+          </article>
+          <article>
+            <strong>Step 3</strong>
+            <p>Enter email once and receive the install link immediately on screen.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section cta-section">
+        <div>
+          <p class="section-kicker">Closed Test Access</p>
+          <h2>Need the simple version instead?</h2>
+          <p>Use the minimal install page if you only want a single card with email input and instant install access.</p>
+        </div>
+        <a class="primary-button" href="./install/">Open Simple Install Page</a>
       </section>
     </main>
 
     <script src="./config.js"></script>
-    <script src="./app.js"></script>
   </body>
 </html>
