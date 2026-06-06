@@ -13,11 +13,12 @@
     />
     <link rel="stylesheet" href="../../styles.css" />
   </head>
-  <body class="install-page minimal-install-page">
+  <body class="install-page minimal-install-page install-page-th">
     <main class="install-shell">
       <section class="install-card minimal-install-card">
         <div class="install-brand minimal-install-brand">
           <img class="brand-logo" src="../../assets/images/monster_face.png" alt="PiLord icon" />
+          <p class="app-name">PiLord</p>
           <h1>ติดตั้งแอป</h1>
         </div>
 
@@ -48,13 +49,13 @@
             placeholder="you@example.com"
             required
           />
-          <p class="consent-note">* ยินยอมรับแอปรุ่นทดสอบ</p>
           <button id="submit-button" type="submit">รับลิงก์ติดตั้ง</button>
           <p id="form-status" class="form-status" role="status"></p>
         </form>
 
-        <div id="install-result" class="install-result" hidden>
-          <a id="install-link" class="primary-button install-link-button" href="#" target="_blank" rel="noreferrer">เปิดลิงก์ติดตั้ง</a>
+        <div id="install-result" class="install-result minimal-install-result" hidden>
+          <p class="install-warning">ถ้ายังไม่เคยลงทะเบียน closed test จะยังไม่สามารถติดตั้งได้</p>
+          <a id="install-link" class="install-text-link" href="#" target="_blank" rel="noreferrer">ลิงก์ติดตั้ง</a>
         </div>
       </section>
     </main>

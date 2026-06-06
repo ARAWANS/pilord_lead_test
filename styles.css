@@ -448,6 +448,15 @@ button:hover {
   height: 68px;
 }
 
+.app-name {
+  margin: 0;
+  color: var(--gold);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .install-card h1 {
   font-size: clamp(2.4rem, 7vw, 3.6rem);
   max-width: none;
@@ -506,12 +515,6 @@ button:disabled {
   cursor: progress;
 }
 
-.consent-note {
-  margin: -2px 0 2px;
-  color: var(--muted);
-  font-size: 0.84rem;
-}
-
 .form-status {
   min-height: 1.4em;
   margin: 0;
@@ -528,8 +531,33 @@ button:disabled {
 
 .install-result {
   display: grid;
-  gap: 10px;
+  gap: 6px;
   margin-top: 18px;
+}
+
+.minimal-install-result {
+  justify-items: end;
+}
+
+.install-warning {
+  margin: 0;
+  max-width: 260px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.install-text-link {
+  color: rgba(239, 245, 255, 0.82);
+  font-size: 0.86rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.install-text-link:hover {
+  color: var(--text);
+  text-decoration: underline;
 }
 
 .install-link-button {
