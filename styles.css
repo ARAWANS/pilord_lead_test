@@ -632,7 +632,7 @@ button:disabled {
 
 .home-page {
   color: #243123;
-  background: linear-gradient(180deg, #bfe8ff 0%, #ddf4ff 33%, #f9f3dc 33%, #f6efd2 100%);
+  background: linear-gradient(180deg, #f8f7f2 0%, #f2f1ea 100%);
 }
 
 .home-page::before {
@@ -673,76 +673,14 @@ button:disabled {
 }
 
 .home-kicker {
-  color: #62904e;
+  color: #6d7a68;
 }
 
-.studio-card,
-.project-card {
-  border: 1px solid rgba(119, 139, 81, 0.16);
-  border-radius: 28px;
-  background: rgba(255, 251, 242, 0.92);
-  box-shadow: 0 24px 50px rgba(104, 112, 56, 0.12);
-}
-
-.studio-card {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 20px;
-  padding: 24px;
-  margin-bottom: 26px;
-}
-
-.studio-copy h1 {
-  max-width: 12ch;
-  color: #22331f;
-  font-size: clamp(2.35rem, 4.6vw, 4rem);
-  line-height: 1.02;
-}
-
-.studio-lead {
-  margin: 14px 0 0;
-  color: #5a6d50;
-  font-size: 0.98rem;
-  font-weight: 600;
-}
-
-.studio-text {
-  max-width: 56ch;
-  margin: 12px 0 0;
-  color: #667461;
-  font-size: 0.98rem;
-}
-
-.studio-links {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 22px;
-}
-
-.studio-visual-card {
-  display: grid;
-  gap: 10px;
-  align-content: start;
-}
-
-.studio-visual-image,
 .project-image {
   width: 100%;
   display: block;
   border-radius: 22px;
   object-fit: cover;
-}
-
-.studio-visual-image {
-  aspect-ratio: 1.25 / 1;
-  object-position: center top;
-}
-
-.studio-visual-note {
-  margin: 0;
-  color: #6b725f;
-  font-size: 0.83rem;
 }
 
 .projects-section {
@@ -753,6 +691,12 @@ button:disabled {
 .projects-heading h2 {
   max-width: none;
   color: #22331f;
+}
+
+.projects-heading h1 {
+  max-width: none;
+  color: #22331f;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
 }
 
 .projects-heading p {
@@ -770,12 +714,16 @@ button:disabled {
   display: grid;
   gap: 14px;
   padding: 22px;
+  border: 1px solid rgba(119, 139, 81, 0.12);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 16px 36px rgba(95, 101, 73, 0.08);
 }
 
 .project-card h2 {
   max-width: none;
   color: #20301c;
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
 }
 
 .project-card p {
@@ -784,31 +732,35 @@ button:disabled {
 }
 
 .project-card-muted {
-  background: rgba(252, 247, 231, 0.9);
+  align-content: start;
+  background: rgba(252, 251, 246, 0.94);
 }
 
 .project-card-featured .project-image {
   aspect-ratio: 1.45 / 1;
 }
 
-.project-placeholder-art {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  padding: 18px;
-  border-radius: 22px;
-  background: linear-gradient(135deg, rgba(255, 240, 208, 0.96), rgba(255, 251, 241, 0.96));
+.project-app-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.project-placeholder-art span {
-  display: grid;
-  place-items: center;
-  min-height: 110px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.74);
-  color: #866a3b;
-  font-size: 0.9rem;
-  font-weight: 700;
+.project-app-lockup-simple {
+  min-height: 64px;
+}
+
+.project-app-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(81, 92, 70, 0.1);
+}
+
+.project-app-subtitle {
+  margin: 4px 0 0;
+  color: #6d7767;
+  font-size: 0.92rem;
 }
 
 .project-meta-row {
@@ -831,11 +783,6 @@ button:disabled {
   font-weight: 700;
 }
 
-.project-category {
-  color: #4d7a3f;
-  background: rgba(165, 214, 127, 0.2);
-}
-
 .project-status {
   color: #83612d;
   background: rgba(255, 222, 138, 0.32);
@@ -844,14 +791,6 @@ button:disabled {
 .project-status.is-live {
   color: #2e6b44;
   background: rgba(144, 222, 168, 0.34);
-}
-
-.project-detail-list {
-  display: grid;
-  gap: 8px;
-  margin: 0;
-  padding-left: 18px;
-  color: #596554;
 }
 
 .project-button {
@@ -865,110 +804,8 @@ button:disabled {
   background: rgba(218, 207, 174, 0.38);
 }
 
-.farm-scene {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.farm-sun,
-.farm-cloud,
-.farm-hill,
-.farm-barn,
-.farm-path,
-.farm-fence {
-  position: absolute;
-}
-
-.farm-sun {
-  top: 74px;
-  right: 10%;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ffe88f 0%, #ffd465 62%, rgba(255, 212, 101, 0.25) 63%, rgba(255, 212, 101, 0) 100%);
-}
-
-.farm-cloud {
-  height: 30px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.84);
-  box-shadow: 34px 6px 0 10px rgba(255, 255, 255, 0.88), 68px 0 0 6px rgba(255, 255, 255, 0.82);
-}
-
-.farm-cloud-a {
-  top: 110px;
-  left: 10%;
-  width: 86px;
-}
-
-.farm-cloud-b {
-  top: 170px;
-  left: 38%;
-  width: 72px;
-}
-
-.farm-hill {
-  left: -8%;
-  right: -8%;
-  border-radius: 50% 50% 0 0;
-}
-
-.farm-hill-back {
-  bottom: 24%;
-  height: 28%;
-  background: #8fd077;
-}
-
-.farm-hill-front {
-  bottom: 0;
-  height: 34%;
-  background: #74bb5f;
-}
-
-.farm-barn {
-  right: 13%;
-  bottom: 17%;
-  width: 112px;
-  height: 82px;
-  background: #d86b45;
-  clip-path: polygon(0 38%, 50% 0, 100% 38%, 100% 100%, 0 100%);
-  box-shadow: inset 0 -18px 0 rgba(121, 55, 33, 0.16);
-}
-
-.farm-barn::before {
-  content: '';
-  position: absolute;
-  left: 37px;
-  bottom: 0;
-  width: 38px;
-  height: 42px;
-  background: #fff4df;
-  border-radius: 12px 12px 0 0;
-}
-
-.farm-path {
-  left: 52%;
-  bottom: 0;
-  width: 180px;
-  height: 25%;
-  transform: translateX(-50%);
-  background: #e4cb94;
-  clip-path: polygon(45% 0, 55% 0, 78% 100%, 22% 100%);
-}
-
-.farm-fence {
-  left: 6%;
-  right: 6%;
-  bottom: 18%;
-  height: 10px;
-  background: repeating-linear-gradient(90deg, rgba(255, 247, 225, 0.75) 0 44px, rgba(219, 188, 124, 0.8) 44px 48px);
-}
-
 @media (max-width: 920px) {
   .home-header,
-  .studio-card,
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -978,15 +815,8 @@ button:disabled {
     justify-content: flex-start;
   }
 
-  .studio-card,
   .project-grid {
     display: grid;
-  }
-
-  .farm-barn {
-    right: 6%;
-    width: 92px;
-    height: 68px;
   }
 }
 
@@ -996,13 +826,11 @@ button:disabled {
     padding-top: 16px;
   }
 
-  .studio-copy h1,
-  .projects-heading h2,
+  .projects-heading h1,
   .project-card h2 {
     max-width: 11ch;
   }
 
-  .studio-links,
   .project-button {
     width: 100%;
   }
@@ -1011,17 +839,7 @@ button:disabled {
     justify-content: center;
   }
 
-  .project-placeholder-art {
-    grid-template-columns: 1fr;
-  }
-
-  .farm-sun {
-    right: 4%;
-    width: 88px;
-    height: 88px;
-  }
-
-  .farm-cloud-b {
-    left: 56%;
+  .project-app-lockup {
+    align-items: flex-start;
   }
 }

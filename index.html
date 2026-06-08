@@ -24,17 +24,6 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="home-page">
-    <div class="farm-scene" aria-hidden="true">
-      <div class="farm-sun"></div>
-      <div class="farm-cloud farm-cloud-a"></div>
-      <div class="farm-cloud farm-cloud-b"></div>
-      <div class="farm-hill farm-hill-back"></div>
-      <div class="farm-hill farm-hill-front"></div>
-      <div class="farm-barn"></div>
-      <div class="farm-path"></div>
-      <div class="farm-fence"></div>
-    </div>
-
     <main class="home-shell">
       <header class="home-header">
         <a class="wordmark" href="./">PiLord Studio</a>
@@ -44,87 +33,46 @@
         </nav>
       </header>
 
-      <section class="studio-card">
-        <div class="studio-copy">
-          <p class="section-kicker home-kicker">Studio Introduction</p>
-          <h2>Explore our app</h2>
-          <p class="studio-lead">Engineering supports everyday life.</p>
-          <p class="studio-text">Hope you enjoy.</p>
-          <div class="studio-links">
-            <!-- <a class="primary-button project-button" id="org-profile-link" href="https://t.me/pimath_studio" target="_blank" rel="noreferrer">Contact via Line</a>
-            <a class="primary-button project-button" id="contact-link" href="https://line.me/R/ti/p/~pimath_studio" target="_blank" rel="noreferrer">Contact via telegram</a> -->
-          </div>
-        </div>
-        <div class="studio-visual-card">
-          <img class="studio-visual-image" src="./assets/images/office.png" alt="Studio engineer visual" />
-          <p class="studio-visual-note">PiMath Studio</p>
-        </div>
-      </section>
-
       <section class="projects-section" aria-label="Projects">
         <div class="projects-heading">
-          <p class="section-kicker home-kicker">Current Projects</p>
-          <h2>Built project by project.</h2>
-          <p>Each card shows what the project is, where it stands now, and what users can do next.</p>
+          <p class="section-kicker home-kicker">Apps</p>
+          <h1>Explore our apps</h1>
+          <p>Simple, clear, and focused on what is available now.</p>
         </div>
 
         <div class="project-grid">
           <article class="project-card project-card-featured">
+            <div class="project-app-lockup">
+              <img class="project-app-logo" src="./assets/images/monster_face.png" alt="PiLord app logo" />
+              <div>
+                <h2>PiLord</h2>
+                <p class="project-app-subtitle">Math Education</p>
+              </div>
+            </div>
             <img class="project-image" src="./assets/images/highlight.png" alt="PiLord gameplay highlight" />
             <div class="project-meta-row">
-              <span class="project-category">Math Education</span>
               <span class="project-status is-live">Opening Test</span>
             </div>
-            <h2>PiLord</h2>
             <p>
               A fantasy math education game for mobile. PiLord blends stages, spell-like actions, and academic practice into a game loop meant to feel alive.
             </p>
-            <ul class="project-detail-list">
-              <li>Focus: arithmetic to higher-level school math</li>
-              <li>Current state: testers can request the install link now</li>
-              <li>Platform: mobile-first test flow</li>
-            </ul>
             <a class="primary-button project-button" href="./install/">Go to Install Page</a>
           </article>
 
           <article class="project-card project-card-muted">
-            <!-- <div class="project-placeholder-art" aria-hidden="true">
-              <span>English</span>
-              <span>Reading</span>
-              <span>Listening</span>
-            </div> -->
+            <div class="project-app-lockup project-app-lockup-simple">
+              <div>
+                <h2>PiTalk</h2>
+                <p class="project-app-subtitle">English Education</p>
+              </div>
+            </div>
             <div class="project-meta-row">
-              <span class="project-category">English Education</span>
               <span class="project-status">Coming Soon</span>
             </div>
-            <h2>New English Project</h2>
-            <p>
-              Our next education app will focus on English learning. The product is still being shaped, and a fuller project page will come later.
-            </p>
-            <ul class="project-detail-list">
-              <li>Focus: English education</li>
-              <li>Current state: early planning and direction</li>
-              <li>Availability: not open yet</li>
-            </ul>
             <span class="project-note">Coming soon</span>
           </article>
         </div>
       </section>
     </main>
-
-    <script src="./config.js"></script>
-    <script>
-      (function () {
-        const config = window.PILORD_CONFIG || {};
-        const profileLink = document.getElementById('org-profile-link');
-        const contactLink = document.getElementById('contact-link');
-        if (profileLink && config.telegramUrl) {
-          profileLink.href = config.telegramUrl;
-        }
-        if (contactLink && config.lineUrl) {
-          contactLink.href = config.lineUrl;
-        }
-      })();
-    </script>
   </body>
 </html>
